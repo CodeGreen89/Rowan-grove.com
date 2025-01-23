@@ -52,7 +52,7 @@ jobs:
       - name: Install Hugo
         run: |
           wget https://github.com/gohugoio/hugo/releases/download/v0.124.1/hugo_extended_0.124.1_Linux-64bit.tar.gz
-          tar -xvzf hugo_0.124.1_Linux-64bit.tar.gz
+          tar -xvzf hugo_extended_0.124.1_Linux-64bit.tar.gz
           sudo mv hugo /usr/local/bin/
 
       # Clean up Cache
