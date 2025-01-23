@@ -18,22 +18,27 @@ jobs:
        id-token: write
        contents: read
     steps:
+      # Checkout repository
       - uses: actions/checkout@v3
         with:
           submodules: true
           lfs: false
       
+      # Set up Go
       - name: Setup Go
         uses: actions/setup-go@v3
         with:
           go-version: '1.19'
 
+      # Verify Go version
       - name: Verify Go Version
         run: go version
 
+      # Install OIDC Client from Core Package (used by your workflow)
       - name: Install OIDC Client from Core Package
         run: npm install @actions/core@1.6.0 @actions/http-client
 
+      # Get Id Token (for authentication purposes)
       - name: Get Id Token
         uses: actions/github-script@v6
         id: idtoken
@@ -43,22 +48,28 @@ jobs:
                return await coredemo.getIDToken()
            result-encoding: string
 
+      # Install Hugo
       - name: Install Hugo
         run: |
-          wget https://github.com/gohugoio/hugo/releases/download/v0.89.4/hugo_extended_0.89.4_Linux-64bit.deb
-          sudo dpkg -i hugo_extended_0.89.4_Linux-64bit.deb
+          wget https://github.com/gohugoio/hugo/releases/download/v0.124.1/hugo_0.124.1_Linux-64bit.tar.gz
+          tar -xvzf hugo_0.124.1_Linux-64bit.tar.gz
+          sudo mv hugo /usr/local/bin/
 
+      # Clean up Cache
       - name: Clean Up Cache
         run: sudo apt-get clean
 
+      # Set Go environment variable
       - name: Set Go Environment Variable
         run: |
           export GO111MODULE=on
           go mod tidy
 
-      - name: Build
-        run: hugo
+      # Build the Hugo site
+      - name: Build Hugo Site
+        run: hugo --minify  # Build Hugo site with the minification option
 
+      # Build and Deploy to Azure Static Web App
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -66,9 +77,9 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_THANKFUL_MOSS_028E49203 }}
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          app_location: "/" # App source code path
-          api_location: "" # Api source code path - optional
-          output_location: "public" # Built app content directory - optional
+          app_location: "/" # App source code path (your Hugo project directory)
+          api_location: ""  # Api source code path - optional, leave empty since it's a static site
+          output_location: "public"  # Built app content directory (Hugo default output)
           github_id_token: ${{ steps.idtoken.outputs.result }}
           ###### End of Repository/Build Configurations ######
 
