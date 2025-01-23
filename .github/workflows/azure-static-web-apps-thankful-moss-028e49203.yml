@@ -81,6 +81,7 @@ jobs:
           api_location: ""  # Api source code path - optional, leave empty since it's a static site
           output_location: "public"  # Built app content directory (Hugo default output)
           github_id_token: ${{ steps.idtoken.outputs.result }}
+          run_build_command: "hugo --minify" # Explicit build command for Hugo
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
