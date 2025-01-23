@@ -48,11 +48,11 @@ jobs:
                return await coredemo.getIDToken()
            result-encoding: string
 
-      # Install Hugo
-      - name: Install Hugo
+      # Install Hugo Extended version (necessary for SASS/SCSS support)
+      - name: Install Hugo Extended
         run: |
-          wget https://github.com/gohugoio/hugo/releases/download/v0.124.1/hugo_0.124.1_Linux-64bit.tar.gz
-          tar -xvzf hugo_0.124.1_Linux-64bit.tar.gz
+          wget https://github.com/gohugoio/hugo/releases/download/v0.124.1/hugo_extended_0.124.1_Linux-64bit.tar.gz
+          tar -xvzf hugo_extended_0.124.1_Linux-64bit.tar.gz
           sudo mv hugo /usr/local/bin/
 
       # Clean up Cache
@@ -84,12 +84,4 @@ jobs:
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
-    runs-on: ubuntu-latest
-    name: Close Pull Request Job
-    steps:
-      - name: Close Pull Request
-        id: closepullrequest
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          action: "close"
+    if: gi
