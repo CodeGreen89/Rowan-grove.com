@@ -28,6 +28,9 @@ jobs:
         with:
           go-version: '1.19.7'
 
+      - name: Verify Go Version
+        run: go version
+
       - name: Install OIDC Client from Core Package
         run: npm install @actions/core@1.6.0 @actions/http-client
 
@@ -44,6 +47,14 @@ jobs:
         run: |
           wget https://github.com/gohugoio/hugo/releases/download/v0.89.4/hugo_extended_0.89.4_Linux-64bit.deb
           sudo dpkg -i hugo_extended_0.89.4_Linux-64bit.deb
+
+      - name: Clean Up Cache
+        run: sudo apt-get clean
+
+      - name: Set Go Environment Variable
+        run: |
+          export GO111MODULE=on
+          go mod tidy
 
       - name: Build
         run: hugo
