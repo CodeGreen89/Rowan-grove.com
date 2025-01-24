@@ -21,8 +21,12 @@ jobs:
       # Checkout repository
       - uses: actions/checkout@v3
         with:
-          submodules: true
-          lfs: false
+          repository: ${{ github.repository }} # Ensures the correct repository is checked out
+          ref: main                           # Specifies the branch to checkout
+          submodules: true                    # Ensures submodules are cloned and initialized
+          clean: true                         # Ensures a clean working directory
+          lfs: false                          # Keeps the existing configuration for large file support
+
 
         
       # Debug: List repository files after checkout
