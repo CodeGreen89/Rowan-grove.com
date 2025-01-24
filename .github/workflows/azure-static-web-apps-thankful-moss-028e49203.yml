@@ -69,6 +69,14 @@ jobs:
       - name: Build Hugo Site
         run: hugo --minify  # Build Hugo site with the minification option
 
+      # Debug: List root directory
+      - name: Debug Root Directory
+        run: ls -R /
+
+      # Debug: List contents of public folder
+      - name: Debug Public Folder
+        run: ls -R public
+
       # Build and Deploy to Azure Static Web App
       - name: Build And Deploy
         id: builddeploy
