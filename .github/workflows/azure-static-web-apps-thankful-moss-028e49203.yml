@@ -15,14 +15,19 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     permissions:
-       id-token: write
-       contents: read
+      id-token: write
+      contents: read
     steps:
       # Checkout repository
       - uses: actions/checkout@v3
         with:
           submodules: true
           lfs: false
+
+        
+      # Debug: List repository files after checkout
+      - name: Debug Repository Files
+        run: ls -R /github/workspace
       
       # Set up Go
       - name: Setup Go
