@@ -18,7 +18,7 @@ jobs:
        id-token: write
        contents: read
     steps:
-      # Checkout repository¬
+      # Checkout repository
       - uses: actions/checkout@v3
         with:
           submodules: true
@@ -69,13 +69,13 @@ jobs:
       - name: Build Hugo Site
         run: hugo --minify  # Build Hugo site with the minification option
 
-      # Debug: List root directory
-      - name: Debug Root Directory
-        run: ls -R /
+      # Debug: List contents of the GitHub workspace
+      - name: Debug GitHub Workspace
+        run: ls -R /github/workspace
 
       # Debug: List contents of public folder
       - name: Debug Public Folder
-        run: ls -R public
+        run: ls -R /github/workspace/public
 
       # Build and Deploy to Azure Static Web App
       - name: Build And Deploy
