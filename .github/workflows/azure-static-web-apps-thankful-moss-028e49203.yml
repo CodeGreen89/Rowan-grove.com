@@ -82,7 +82,7 @@ jobs:
           output_location: "public"  # Built app content directory (Hugo default output)
           skip_app_build: true # skip onyx build as already building with Hugo
           github_id_token: ${{ steps.idtoken.outputs.result }}
-          run: "hugo --minify" # Explicit build command for Hugo
+          app_build_command: "hugo --minify" # Explicit build command for Hugo
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
