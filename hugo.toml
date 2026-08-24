@@ -1,3 +1,9 @@
-baseURL = 'http://localhost:1313/'
-languageCode = 'en-us'
-title = 'Rowan Grove IT Consulting'
+baseURL = 'https://www.rowan-grove.com/'
+languageCode = 'en-gb'
+title = 'IT Support North Yorkshire | Rowan Grove IT'
+disableKinds = ['page', 'taxonomy', 'term', 'RSS']
+[params]
+description = 'IT support for small businesses across North Yorkshire. Microsoft 365, cloud, Wi-Fi, cybersecurity and managed websites from Rowan Grove IT.'
+[sitemap]
+changefreq = 'monthly'
+priority = 0.8
