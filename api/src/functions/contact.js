@@ -2,10 +2,14 @@ const { app } = require("@azure/functions");
 const { EmailClient } = require("@azure/communication-email");
 
 const attempts = new Map();
-const EMAIL_PATTERN = /^[^s@]+@[^s@]+.[^s@]+$/;
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function text(value, maxLength) {
   return String(value || "").trim().slice(0, maxLength);
+}
+
+function singleLine(value, maxLength) {
+  return text(value, maxLength).replace(/[\r\n]+/g, " ");
 }
 
 function json(status, body) {
@@ -41,10 +45,10 @@ app.http("contact", {
 
     if (text(body.website, 200)) return json(200, { message: "Message received." });
 
-    const name = text(body.name, 100);
+    const name = singleLine(body.name, 100);
     const email = text(body.email, 160).toLowerCase();
     const phone = text(body.phone, 40);
-    const company = text(body.company, 120);
+    const company = singleLine(body.company, 120);
     const message = text(body.message, 4000);
     const startedAt = Number(body.startedAt);
 

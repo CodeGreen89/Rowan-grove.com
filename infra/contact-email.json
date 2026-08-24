@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "emailServiceName": {
+      "type": "string",
+      "defaultValue": "rgit-email-8f1c7884"
+    },
+    "communicationServiceName": {
+      "type": "string",
+      "defaultValue": "rgit-contact-8f1c7884"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Communication/emailServices",
+      "apiVersion": "2025-09-01",
+      "name": "[parameters('emailServiceName')]",
+      "location": "global",
+      "tags": {
+        "purpose": "Rowan Grove website contact form"
+      },
+      "properties": {
+        "dataLocation": "Europe"
+      }
+    },
+    {
+      "type": "Microsoft.Communication/emailServices/domains",
+      "apiVersion": "2025-09-01",
+      "name": "[format('{0}/AzureManagedDomain', parameters('emailServiceName'))]",
+      "location": "global",
+      "dependsOn": [
+        "[resourceId('Microsoft.Communication/emailServices', parameters('emailServiceName'))]"
+      ],
+      "properties": {
+        "domainManagement": "AzureManaged",
+        "userEngagementTracking": "Disabled"
+      }
+    },
+    {
+      "type": "Microsoft.Communication/communicationServices",
+      "apiVersion": "2025-09-01",
+      "name": "[parameters('communicationServiceName')]",
+      "location": "global",
+      "tags": {
+        "purpose": "Rowan Grove website contact form"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Communication/emailServices/domains', parameters('emailServiceName'), 'AzureManagedDomain')]"
+      ],
+      "properties": {
+        "dataLocation": "Europe",
+        "linkedDomains": [
+          "[resourceId('Microsoft.Communication/emailServices/domains', parameters('emailServiceName'), 'AzureManagedDomain')]"
+        ],
+        "publicNetworkAccess": "Enabled"
+      }
+    }
+  ],
+  "outputs": {
+    "communicationServiceId": {
+      "type": "string",
+      "value": "[resourceId('Microsoft.Communication/communicationServices', parameters('communicationServiceName'))]"
+    },
+    "emailDomainId": {
+      "type": "string",
+      "value": "[resourceId('Microsoft.Communication/emailServices/domains', parameters('emailServiceName'), 'AzureManagedDomain')]"
+    }
+  }
+}
