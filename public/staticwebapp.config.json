@@ -10,6 +10,76 @@
   },
   "routes": [
     {
+      "route": "/about*",
+      "redirect": "/#about",
+      "statusCode": 301
+    },
+    {
+      "route": "/contact*",
+      "redirect": "/#contact",
+      "statusCode": 301
+    },
+    {
+      "route": "/services-overview*",
+      "redirect": "/#services",
+      "statusCode": 301
+    },
+    {
+      "route": "/wi-fi-mesh-network*",
+      "redirect": "/#services",
+      "statusCode": 301
+    },
+    {
+      "route": "/new-page*",
+      "redirect": "/#services",
+      "statusCode": 301
+    },
+    {
+      "route": "/office-365*",
+      "redirect": "/#services",
+      "statusCode": 301
+    },
+    {
+      "route": "/microsoft-entra-id*",
+      "redirect": "/#services",
+      "statusCode": 301
+    },
+    {
+      "route": "/starlink*",
+      "redirect": "/#services",
+      "statusCode": 301
+    },
+    {
+      "route": "/azure*",
+      "redirect": "/#consulting",
+      "statusCode": 301
+    },
+    {
+      "route": "/custom-scripting*",
+      "redirect": "/#consulting",
+      "statusCode": 301
+    },
+    {
+      "route": "/voip-cloud-telephony*",
+      "redirect": "/#services",
+      "statusCode": 301
+    },
+    {
+      "route": "/backups-redundancy*",
+      "redirect": "/#services",
+      "statusCode": 301
+    },
+    {
+      "route": "/security-antivirus*",
+      "redirect": "/#services",
+      "statusCode": 301
+    },
+    {
+      "route": "/hardware-sales-and-setup*",
+      "redirect": "/#services",
+      "statusCode": 301
+    },
+    {
       "route": "/api/contact",
       "methods": [
         "POST"
@@ -21,7 +91,7 @@
   ],
   "responseOverrides": {
     "404": {
-      "rewrite": "/index.html",
+      "rewrite": "/404.html",
       "statusCode": 404
     }
   }
