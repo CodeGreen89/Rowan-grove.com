@@ -52,7 +52,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 76px;
 }
 
 .logo {
@@ -62,7 +62,7 @@ body {
 }
 
 .logo-mark {
-  height: 44px;
+  height: 58px;
   width: auto;
   display: block;
 }
@@ -143,5 +143,11 @@ body {
 
 @media (max-width: 640px) {
   .site-header nav { display: none; }
+  .header-inner { height: 60px; }
+  .logo-mark { height: 36px; }
+  .btn-header { padding: 8px 14px; font-size: 0.85rem; }
+  .hero { padding: 56px 0; }
   .hero h1 { font-size: 1.8rem; }
+  .hero-sub { font-size: 1rem; }
+  .section { padding: 48px 0; }
 }
