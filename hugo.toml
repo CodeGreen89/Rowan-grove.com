@@ -1,9 +1,9 @@
 baseURL = 'https://www.rowan-grove.com/'
 languageCode = 'en-gb'
-title = 'Small Business IT Support North Yorkshire | Rowan Grove IT'
+title = 'Small Business Websites UK | IT Support North Yorkshire'
 disableKinds = ['page', 'taxonomy', 'term', 'RSS']
 [params]
-description = 'Local IT support for small businesses in Malton, Ryedale and across North Yorkshire. Microsoft 365, cloud, cybersecurity, Wi-Fi and remote or onsite help.'
+description = 'Professional websites for small businesses across the UK, plus Microsoft 365, cloud and IT support from Rowan Grove in North Yorkshire.'
 [sitemap]
 changefreq = 'monthly'
 priority = 0.8
