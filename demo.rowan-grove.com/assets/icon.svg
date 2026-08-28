@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <path fill="#1F4E78" d="M32 6
+    C 43 8, 52 17, 52 29
+    C 52 41, 43.5 51, 32 58
+    C 20.5 51, 12 41, 12 29
+    C 12 17, 21 8, 32 6
+    Z"/>
+  <path fill="none" stroke="#123049" stroke-width="2" stroke-linecap="round"
+    d="M32 16 L32 52 M32 24 L24 30 M32 32 L40 38 M32 40 L24 45"/>
+</svg>
