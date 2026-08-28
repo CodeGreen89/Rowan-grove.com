@@ -58,15 +58,13 @@ body {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: var(--brand-dark);
   text-decoration: none;
 }
 
 .logo-mark {
-  flex-shrink: 0;
+  height: 44px;
+  width: auto;
+  display: block;
 }
 
 .site-header nav { display: flex; gap: 24px; }
