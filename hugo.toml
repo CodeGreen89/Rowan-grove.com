@@ -1,6 +1,6 @@
 baseURL = 'https://www.rowan-grove.com/'
 languageCode = 'en-gb'
-title = 'Small Business Websites UK | IT Support North Yorkshire'
+title = 'Small Business IT Support | Rowan Grove IT'
 disableKinds = ['page', 'taxonomy', 'term', 'RSS']
 [params]
 description = 'Professional websites for small businesses across the UK, plus Microsoft 365, cloud and IT support from Rowan Grove in North Yorkshire.'
