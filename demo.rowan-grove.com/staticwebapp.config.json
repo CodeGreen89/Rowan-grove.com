@@ -17,6 +17,6 @@
   },
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["/images/*.{png,jpg,gif,svg}", "/css/*", "/*.css", "/*.ico"]
+    "exclude": ["/images/*.{png,jpg,gif,svg}", "/assets/*.{png,jpg,gif,svg,ico}", "/css/*", "/*.css", "/*.ico"]
   }
 }
