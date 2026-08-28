@@ -1,0 +1,142 @@
+:root {
+  --brand: #1F4E78;
+  --brand-dark: #123049;
+  --text: #1a1a1a;
+  --muted: #5a5a5a;
+  --bg-alt: #f4f6f8;
+  --ribbon-bg: #fff8e6;
+  --ribbon-border: #e8c766;
+  --ribbon-text: #5c4a12;
+  --radius: 10px;
+  --font: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Example ribbon - remove this block (and the div in index.html) for a real client site */
+.example-ribbon {
+  background: var(--ribbon-bg);
+  border-bottom: 1px solid var(--ribbon-border);
+  color: var(--ribbon-text);
+  text-align: center;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+}
+
+.example-ribbon strong { color: var(--brand-dark); }
+.example-ribbon a { color: var(--brand); font-weight: 600; text-decoration: underline; }
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--brand-dark);
+  text-decoration: none;
+}
+
+.site-header nav { display: flex; gap: 24px; }
+.site-header nav a { color: var(--text); text-decoration: none; font-size: 0.95rem; }
+.site-header nav a:hover { color: var(--brand); }
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: opacity 0.15s ease;
+}
+
+.btn:hover { opacity: 0.85; }
+.btn-header { background: var(--brand); color: #fff; }
+.btn-primary { background: var(--brand); color: #fff; }
+.btn-secondary { background: transparent; color: var(--brand-dark); border: 2px solid var(--brand); }
+
+.hero {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
+  color: #fff;
+  padding: 90px 0;
+  text-align: center;
+}
+
+.hero h1 { font-size: 2.4rem; margin: 0 0 16px; }
+.hero-sub { font-size: 1.15rem; max-width: 640px; margin: 0 auto 32px; opacity: 0.95; }
+.hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.hero .btn-secondary { color: #fff; border-color: #fff; }
+
+.section { padding: 64px 0; }
+.section-alt { background: var(--bg-alt); }
+.section h2 { font-size: 1.8rem; margin-bottom: 32px; text-align: center; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.card h3 { margin-top: 0; color: var(--brand-dark); }
+
+.about-inner, .contact-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  text-align: left;
+  display: inline-block;
+}
+
+.contact-list li { margin-bottom: 12px; }
+.contact-list a { color: var(--brand-dark); font-weight: 600; text-decoration: none; }
+
+.site-footer {
+  background: var(--brand-dark);
+  color: #fff;
+  padding: 28px 0;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.footer-inner p { margin: 4px 0; }
+.footer-credit a { color: #fff; }
+
+@media (max-width: 640px) {
+  .site-header nav { display: none; }
+  .hero h1 { font-size: 1.8rem; }
+}
