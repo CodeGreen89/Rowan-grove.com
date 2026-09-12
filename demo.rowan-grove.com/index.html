@@ -30,7 +30,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="header-actions">
-      <a class="btn btn-primary btn-header" href="tel:01234567890">Call 01234 567890</a>
+      <a class="btn btn-primary btn-sm" href="tel:01234567890">Call 01234 567890</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
       </button>
@@ -38,43 +38,63 @@
   </div>
 </header>
 
-<section id="top" class="hero">
+<main id="top">
+
+<section class="hero">
   <div class="container hero-grid">
     <div class="hero-content">
-      <span class="tag">Local plumbing &amp; heating specialists</span>
+      <span class="kicker">Local plumbing &amp; heating specialists</span>
       <h1>Reliable plumbing &amp; heating, done right first time</h1>
-      <p class="hero-sub">Boiler repairs, installations and general plumbing for homes and small businesses. Friendly, fully qualified, and always on time.</p>
+      <p class="hero-sub">Boiler repairs, installations and general plumbing for homes and small businesses across the local area. Friendly, fully qualified, and always on time.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="tel:01234567890">Call 01234 567890</a>
-        <a class="btn btn-secondary" href="#contact">Get a quote</a>
-      </div>
-      <div class="cred">
-        <span>Gas Safe registered</span>
-        <span>15+ years' experience</span>
-        <span>Fully insured</span>
-        <span>Local &amp; reliable</span>
+        <a class="btn btn-ghost-light" href="#contact">Get a free quote</a>
       </div>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <span class="ring"></span>
-      <svg viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M32 4C22 20 12 30 12 46a20 20 0 0 0 40 0C52 30 42 20 32 4Z" fill="#2f6fa8"/>
-        <path d="M38 10c-6 12-14 19-14 31a14 14 0 0 0 28 0c0-9-6-16-10-23 1 6-1 10-4 12 2-6 1-14 0-20Z" fill="#e67e2e"/>
-      </svg>
+
+    <div class="hero-card">
+      <span class="label">24/7 emergency call-outs</span>
+      <h2>Speak to us today</h2>
+      <a class="hero-phone" href="tel:01234567890">01234 567890</a>
+      <ul class="hours">
+        <li><span class="day">Mon&ndash;Fri</span> <span class="time">8am&ndash;6pm</span></li>
+        <li><span class="day">Saturday</span> <span class="time">9am&ndash;1pm</span></li>
+        <li><span class="day">Emergencies</span> <span class="time">24 hours</span></li>
+      </ul>
+      <a class="btn btn-primary btn-block" href="mailto:info@example.com">Request a callback</a>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></svg>
+      <span>Gas Safe registered</span>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></svg>
+      <span>15+ years' experience</span>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></svg>
+      <span>Fully insured</span>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></svg>
+      <span>No call-out charge locally</span>
     </div>
   </div>
 </section>
 
 <section id="services" class="section">
   <div class="container">
-    <div class="intro">
-      <div>
-        <span class="kicker">What we do</span>
-        <h2>Plumbing &amp; heating, handled properly.</h2>
-      </div>
-      <p class="lead">From a leaking tap to a full heating installation, one dependable local team for every job, big or small.</p>
+    <div class="section-head">
+      <span class="kicker">What we do</span>
+      <h2>Plumbing &amp; heating, handled properly.</h2>
+      <p class="lead">From a leaking tap to a full heating installation — one dependable local team for every job, big or small.</p>
     </div>
-    <div class="grid">
+    <div class="cards">
       <article class="card">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.4-3.4a4 4 0 0 1-5.7 5.7L6 21l-3-3 9.6-9.6a4 4 0 0 1 5.7-5.7Z"/></svg></span>
         <h3>Boiler repair &amp; servicing</h3>
@@ -88,98 +108,142 @@
       <article class="card">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 2.6 18a1.5 1.5 0 0 0 1.3 2.2h16.2a1.5 1.5 0 0 0 1.3-2.2L13.7 3.9a1.5 1.5 0 0 0-3.4 0Z"/></svg></span>
         <h3>Emergency call-outs</h3>
-        <p>Burst pipe or no heating? We offer same-day emergency call-outs across the local area.</p>
+        <p>Burst pipe, no heating or no hot water? Same-day emergency call-outs across the local area, 24 hours a day.</p>
       </article>
       <article class="card">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
         <h3>Landlord gas safety</h3>
-        <p>Annual gas safety certificates <span class="price">from £65</span>, with clear paperwork and reminders when renewal is due.</p>
+        <p>Annual gas safety certificates <span class="price">from £65</span>, with clear paperwork and a reminder when renewal is due.</p>
       </article>
     </div>
   </div>
 </section>
 
-<section class="why" id="about">
-  <div class="container">
+<section id="about" class="section section-navy">
+  <div class="container why-grid">
     <div>
       <span class="kicker">Why Oakfield</span>
       <h2>Family-run. Fully qualified. Never far away.</h2>
-      <p>We're a small, family-run plumbing and heating business with over 15 years' experience. We pride ourselves on turning up on time, doing the job properly, and never leaving a mess behind.</p>
-      <p>No call-out charge for local jobs, and all work fully guaranteed.</p>
+      <p>We're a small, family-run plumbing and heating business with over 15 years' experience serving homes and small businesses nearby.</p>
+      <p>We pride ourselves on turning up when we say we will, doing the job properly, and never leaving a mess behind.</p>
     </div>
-    <aside class="profile">
-      <span class="tag">Straightforward, honest pricing</span>
-      <h3>No jargon. No hidden costs.</h3>
-      <p>Every job comes with an upfront quote before we start, Gas Safe registered engineers, and a guarantee on all parts and labour.</p>
-    </aside>
+    <div class="promise">
+      <h3>Our promise to you</h3>
+      <ul>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></svg>
+          <span>An upfront, fixed quote before any work starts</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></svg>
+          <span>Gas Safe registered engineers on every job</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></svg>
+          <span>All parts and labour fully guaranteed</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></svg>
+          <span>No call-out charge for local jobs</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></svg>
+          <span>Clean, tidy work and a proper clear-up after</span>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<section class="section testimonials" id="reviews" aria-labelledby="reviews-heading">
+<section id="reviews" class="section section-cream">
   <div class="container">
-    <div class="intro">
-      <div>
-        <span class="kicker">Customer reviews</span>
-        <h2 id="reviews-heading">Trusted by homes and businesses nearby.</h2>
-      </div>
-      <p class="lead">Example reviews — this is the kind of feedback we help our clients showcase.</p>
+    <div class="section-head">
+      <span class="kicker">Customer reviews</span>
+      <h2>Trusted by homes and businesses nearby.</h2>
+      <p class="lead">Example reviews — the kind of feedback we help local businesses showcase.</p>
     </div>
-    <div class="testimonial-carousel" role="region" aria-roledescription="carousel" aria-label="Customer reviews">
-      <div class="testimonial-track">
-        <blockquote class="testimonial is-active" data-slide="0"><p>"Called Oakfield out on a Sunday when our boiler packed in mid-winter. Someone was at the door within the hour and had us back up and running the same afternoon. Can't fault the service."</p><footer><strong>Sarah M.</strong><span>Homeowner</span></footer></blockquote>
-        <blockquote class="testimonial" data-slide="1" aria-hidden="true"><p>"We use Oakfield across all of our rental properties for gas safety checks and repairs. Always professional, always on time, and the paperwork is sorted without us having to chase."</p><footer><strong>Tom Whitfield</strong><span>Whitfield Lettings</span></footer></blockquote>
-        <blockquote class="testimonial" data-slide="2" aria-hidden="true"><p>"Full bathroom refit completed in four days with barely any mess. They talked us through every step and the finish is fantastic."</p><footer><strong>Priya Shah</strong><span>Homeowner</span></footer></blockquote>
-      </div>
-      <div class="carousel-controls">
-        <button class="carousel-arrow carousel-prev" type="button" aria-label="Previous review">&larr;</button>
-        <div class="carousel-dots" role="group" aria-label="Choose review">
-          <button class="dot is-active" type="button" aria-label="Show review 1" aria-current="true"></button>
-          <button class="dot" type="button" aria-label="Show review 2"></button>
-          <button class="dot" type="button" aria-label="Show review 3"></button>
+    <div class="reviews">
+      <blockquote class="review">
+        <div class="stars" role="img" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
         </div>
-        <button class="carousel-arrow carousel-next" type="button" aria-label="Next review">&rarr;</button>
-      </div>
+        <p>"Called Oakfield out on a Sunday when our boiler packed in mid-winter. Someone was at the door within the hour and had us back up and running the same afternoon."</p>
+        <footer><strong>Sarah M.</strong><span>Homeowner</span></footer>
+      </blockquote>
+      <blockquote class="review">
+        <div class="stars" role="img" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+        </div>
+        <p>"We use Oakfield across all of our rental properties for gas safety checks and repairs. Always professional, always on time, and the paperwork is sorted without us having to chase."</p>
+        <footer><strong>Tom Whitfield</strong><span>Whitfield Lettings</span></footer>
+      </blockquote>
+      <blockquote class="review">
+        <div class="stars" role="img" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+        </div>
+        <p>"Full bathroom refit completed in four days with barely any mess. They talked us through every step and the finish is fantastic."</p>
+        <footer><strong>Priya Shah</strong><span>Homeowner</span></footer>
+      </blockquote>
     </div>
   </div>
 </section>
 
-<section class="special">
-  <div class="container">
+<section class="cta-band">
+  <div class="container cta-inner">
     <div>
-      <span class="kicker">Emergency cover</span>
-      <h2>Here when things go wrong.</h2>
-      <p>Same-day emergency call-outs across the local area for the problems that can't wait.</p>
+      <h2>Need a plumber today?</h2>
+      <p>Same-day emergency call-outs across the local area — no call-out charge for local jobs.</p>
     </div>
-    <div class="tags">
-      <span>Boiler breakdowns</span>
-      <span>Burst pipes</span>
-      <span>No heating or hot water</span>
-      <span>Blocked drains</span>
-      <span>Leak detection</span>
-      <span>Landlord emergencies</span>
-    </div>
+    <a class="btn btn-white" href="tel:01234567890">Call 01234 567890</a>
   </div>
 </section>
 
-<section id="contact" class="section contact-section">
+<section id="contact" class="section">
   <div class="container contact-grid">
     <div class="contact-copy">
       <span class="kicker">Get in touch</span>
       <h2>Need a hand with plumbing or heating?</h2>
       <p class="lead">Give us a call or drop us an email — we're happy to give free, no-obligation quotes.</p>
+      <div class="contact-methods">
+        <a href="tel:01234567890">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+          <span><span class="m-label">Phone</span><span class="m-value">01234 567890</span></span>
+        </a>
+        <a href="mailto:info@example.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg>
+          <span><span class="m-label">Email</span><span class="m-value">info@example.com</span></span>
+        </a>
+      </div>
     </div>
-    <div class="contact-card">
-      <ul class="contact-list">
-        <li><span class="label">Phone</span> <a href="tel:01234567890">01234 567890</a></li>
-        <li><span class="label">Email</span> <a href="mailto:info@example.com">info@example.com</a></li>
-        <li><span class="label">Area covered</span> <span>Local area &amp; surrounding villages</span></li>
-        <li><span class="label">Hours</span> <span>Mon&ndash;Fri 8am&ndash;6pm, Sat 9am&ndash;1pm</span></li>
-        <li><span class="label">Emergencies</span> <span>24/7 call-outs</span></li>
+    <div class="info-card">
+      <h3>Opening hours</h3>
+      <ul class="hours">
+        <li><span class="day">Monday&ndash;Friday</span> <span class="time">8am&ndash;6pm</span></li>
+        <li><span class="day">Saturday</span> <span class="time">9am&ndash;1pm</span></li>
+        <li><span class="day">Sunday</span> <span class="time">Emergencies only</span></li>
+        <li><span class="day">Emergency line</span> <span class="time">24 hours</span></li>
       </ul>
-      <a class="btn btn-primary" href="tel:01234567890">Call 01234 567890</a>
+      <div class="area-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span><strong>Area covered:</strong> the local area and surrounding villages, typically within a 15-mile radius.</span>
+      </div>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
@@ -190,58 +254,20 @@
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script>
-(function(){
-  const toggle = document.getElementById('nav-toggle');
-  const nav = document.getElementById('site-nav');
-  if(!toggle || !nav) return;
-  toggle.addEventListener('click', function(){
-    const open = nav.classList.toggle('is-open');
+(function () {
+  var toggle = document.getElementById('nav-toggle');
+  var nav = document.getElementById('site-nav');
+  if (!toggle || !nav) return;
+  toggle.addEventListener('click', function () {
+    var open = nav.classList.toggle('is-open');
     toggle.setAttribute('aria-expanded', String(open));
   });
-  nav.querySelectorAll('a').forEach(function(link){
-    link.addEventListener('click', function(){
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
       nav.classList.remove('is-open');
       toggle.setAttribute('aria-expanded', 'false');
     });
   });
-})();
-</script>
-<script>
-(function(){
-  const carousel = document.querySelector('.testimonial-carousel');
-  if(!carousel) return;
-  const slides = [...carousel.querySelectorAll('.testimonial')];
-  const dots = [...carousel.querySelectorAll('.dot')];
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let current = 0, timer;
-  function show(index, userInitiated){
-    current = (index + slides.length) % slides.length;
-    slides.forEach((slide, i) => {
-      const active = i === current;
-      slide.classList.toggle('is-active', active);
-      slide.setAttribute('aria-hidden', String(!active));
-    });
-    dots.forEach((dot, i) => {
-      const active = i === current;
-      dot.classList.toggle('is-active', active);
-      if(active) dot.setAttribute('aria-current', 'true'); else dot.removeAttribute('aria-current');
-    });
-    if(userInitiated) restart();
-  }
-  function next(){ show(current + 1, false); }
-  function start(){ if(!reduce) timer = setInterval(next, 8000); }
-  function stop(){ clearInterval(timer); }
-  function restart(){ stop(); start(); }
-  carousel.querySelector('.carousel-prev').addEventListener('click', () => show(current - 1, true));
-  carousel.querySelector('.carousel-next').addEventListener('click', () => show(current + 1, true));
-  dots.forEach((dot, i) => dot.addEventListener('click', () => show(i, true)));
-  carousel.addEventListener('mouseenter', stop);
-  carousel.addEventListener('mouseleave', start);
-  carousel.addEventListener('focusin', stop);
-  carousel.addEventListener('focusout', e => { if(!carousel.contains(e.relatedTarget)) start(); });
-  document.addEventListener('visibilitychange', () => document.hidden ? stop() : restart());
-  show(0, false);
-  start();
 })();
 </script>
 </body>
